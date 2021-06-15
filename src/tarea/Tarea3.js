@@ -36,7 +36,12 @@ export function CheckboxList(props) {
   const checkboxes = Object.entries(props.items);
   return(
     <React.Fragment>
-      {checkboxes.map((key, value) => UncontrolledCheckbox({name: key, initialValue: value}))}
+      {checkboxes.map( (key, value) =>
+        <UncontrolledCheckbox
+        name={key}
+        initialValue={value}
+        />
+      )}
     </React.Fragment>
   );
 }
